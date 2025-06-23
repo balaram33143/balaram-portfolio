@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Balaram Varma | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Montserrat', 'Segoe UI', sans-serif;
+            background: linear-gradient(120deg, #e0f7fa 0%, #f8fafc 100%);
+            color: #222;
+            min-height: 100vh;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #2c3e50 60%, #00e6e6 100%);
+            color: white;
+            padding: 3rem 1rem 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+            position: relative;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+        }
+        
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+            margin-bottom: 1rem;
+            background: #fff;
+        }
+        
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+        }
+        
+        .typing {
+            font-size: 1.2rem;
+            color: #00e6e6;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid white;
+            min-height: 1.5em;
+            margin: 0 auto 1rem auto;
+            max-width: 100%;
+            width: fit-content;
+            animation: blink 0.75s step-end infinite;
+        }
+        
+        @keyframes blink {
+            50% {
+                border-color: transparent
+            }
+        }
+        
+        nav {
+            margin-top: 1.5rem;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1.2rem;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: color 0.2s;
+            position: relative;
+        }
+        
+        nav a:after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #00e6e6;
+            transition: width .3s;
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+        }
+        
+        nav a:hover {
+            color: #00e6e6;
+        }
+        
+        nav a:hover:after {
+            width: 100%;
+        }
+        
+        main {
+            max-width: 900px;
+            margin: 2.5rem auto;
+            padding: 0 1rem;
+        }
+        
+        section {
+            background: white;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 18px;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+        
+        section:nth-of-type(1) {
+            animation-delay: 0.4s;
+        }
+        
+        section:nth-of-type(2) {
+            animation-delay: 0.8s;
+        }
+        
+        section:nth-of-type(3) {
+            animation-delay: 1.2s;
+        }
+        
+        section:nth-of-type(4) {
+            animation-delay: 1.6s;
+        }
+        
+        section:nth-of-type(5) {
+            animation-delay: 2s;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        section h2 {
+            color: #00bcd4;
+            margin-bottom: 1rem;
+            font-size: 1.7rem;
+            border-left: 4px solid #00e6e6;
+            padding-left: 0.7rem;
+            letter-spacing: 1px;
+        }
+        
+        .about-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+            margin-top: 1.5rem;
+        }
+        
+        .about-flex .about-text {
+            flex: 2;
+            min-width: 220px;
+        }
+        
+        .about-flex .about-imgs {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+            min-width: 120px;
+        }
+        
+        .about-imgs img {
+            width: 90px;
+            height: 90px;
+            object-fit: contain;
+            border-radius: 16px;
+            background: #f0f0f0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+            border: 2px solid #e0f7fa;
+        }
+        
+        .ai-photo {
+            width: 180px;
+            border-radius: 16px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            margin: 1rem auto;
+            display: block;
+        }
+        
+        ul {
+            list-style-type: square;
+            padding-left: 1.5rem;
+            margin-top: 0.7rem;
+        }
+        
+        section p,
+        li {
+            font-size: 1.13rem;
+            color: #444;
+        }
+        
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin-top: 1.2rem;
+        }
+        
+        .skill-badge {
+            background: linear-gradient(90deg, #e0f7fa 60%, #fff 100%);
+            color: #00796b;
+            padding: 0.6rem 1.2rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .skill-badge img {
+            width: 22px;
+            height: 22px;
+            vertical-align: middle;
+        }
+        
+        .gallery {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+        
+        .gallery img {
+            width: 160px;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.09);
+            border: 2px solid #e0f7fa;
+            background: #fff;
+            transition: transform 0.2s;
+        }
+        
+        .gallery img:hover {
+            transform: scale(1.06) rotate(-2deg);
+            border-color: #00e6e6;
+        }
+        
+        .contact-btn {
+            display: inline-block;
+            margin-top: 1.2rem;
+            padding: 0.7rem 2rem;
+            background: linear-gradient(90deg, #00e6e6 60%, #00bcd4 100%);
+            color: #fff;
+            border: none;
+            border-radius: 24px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: background 0.2s, transform 0.2s;
+            text-decoration: none;
+        }
+        
+        .contact-btn:hover {
+            background: linear-gradient(90deg, #00bcd4 60%, #00e6e6 100%);
+            transform: scale(1.04);
+        }
+        /* Highlighted and Enlarged Contact Section */
+        
+        #contact {
+            box-shadow: 0 0 24px 4px #00e6e6, 0 0 0 4px #e0f7fa inset;
+            border: 2px solid #00e6e6;
+            background: #f0fcfc;
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+            padding: 3rem 2rem;
+        }
+        
+        #contact h2 {
+            color: #0097a7;
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        #contact p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-info {
+            background: #e0f7fa;
+            border: 2px solid #00e6e6;
+            color: #00796b;
+            font-weight: bold;
+            font-size: 1.2rem;
+            padding: 1.5rem 2rem;
+            border-radius: 18px;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-info div {
+            margin-bottom: 1rem;
+        }
+        
+        .contact-info div:last-child {
+            margin-bottom: 0;
+        }
+        
+        .contact-btn {
+            font-size: 1.3rem;
+            padding: 1rem 2.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        @media (max-width: 700px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .typing {
+                font-size: 1rem;
+            }
+            main {
+                padding: 0;
+            }
+            section {
+                padding: 1.2rem;
+            }
+            .about-flex {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .gallery img {
+                width: 100px;
+                height: 70px;
+            }
+            .ai-photo {
+                width: 100px;
+            }
+            #contact {
+                padding: 1.5rem 0.5rem;
+            }
+            / .contact-info {
+                padding: 1rem 0.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header><img src="c:\Users\USER\Downloads\portfilo image.jpeg" alt="Balaram Varma" class="profile-pic" />
+        <h1>Balaram Varma</h1>
+        <div class="typing" id="typing"></div>
+        <nav><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></nav>
+    </header>
+    <main>
+        <section id="about">
+            <h2>About Me</h2><img src="https://cdn.pixabay.com/photo/2017/01/31/13/14/artificial-intelligence-2025789_1280.png" alt="Artificial Intelligence Illustration" class="ai-photo" />
+            <div class="about-flex">
+                <div class="about-text">
+                    <p>Hi! I'm <b>Balaram Varma</b>, a 2nd-year student at Vignan's Institute of Information Technology, Visakhapatnam. My passion lies in <b>Artificial Intelligence</b>,
+                        <b>Web Development</b>, and <b>Python programming</b>. I love building creative projects, hosting events, and collaborating with like-minded people. </p>
+                    <ul>
+                        <li><b>Interests:</b>AI, Machine Learning, Deep Learning, UI &amp; UX, Data Science, Web Development, Open Source</li>
+                        <li><b>Hobbies:</b>Coding, reading tech blogs, playing chess, and exploring new technologies</li>
+                        <li><b>Achievements:</b>National Finalist (Top 4) in Hackvyha'25 organized by GeeksforGeeks at SRM AP; built several mini-projects using Python and JavaScript, participated in coding competitions, and contributed to college tech events</li>
+                        <li><b>Goals:</b>To become a skilled AI engineer and contribute to impactful projects in technology</li>
+                    </ul>
+                </div>
+                <div class="about-imgs"><img src="https://cdn.pixabay.com/photo/2017/01/31/13/14/artificial-intelligence-2025789_1280.png" alt="AI Illustration" /><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo" /></div>
+            </div>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-list"><span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />HTML</span><span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />CSS</span>
+                <span
+                    class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />JavaScript</span><span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />Python</span>
+                    <span
+                        class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="pandas" />pandas</span><span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikit-learn/scikit-learn-original.svg" alt="scikit-learn" />scikit-learn</span>
+                        <span
+                            class="skill-badge">Anchoring</span><span class="skill-badge">Event Hosting</span></div>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li><b>Elvetae 12th</b>: A guidance platform designed to help intermediate (12th) students choose the right path for their future. It provides resources and advice to support students in making informed career and education decisions. </li>
+                <li><b>Offline Attendance Bot</b>: A bot that allows users to check their attendance without needing an internet connection. (Currently under development) </li>
+                <li><b>GPS Number Tracker</b>: A project for tracking phone numbers using GPS technology. (Currently under development) </li>
+            </ul>
+        </section>
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery"><img src="https://cdn.pixabay.com/photo/2017/01/31/13/14/artificial-intelligence-2025789_1280.png" alt="AI Photo" /><img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Python Code" /><img
+                    src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" alt="Web Development" /><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Event Hosting"
+                /></div>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Want to connect or collaborate? Feel free to reach out! </p>
+            <div class="contact-info">
+                <div><b>Phone:</b>9392362082</div>
+                <div><b>Email:</b><a href="mailto:varmabalaram81@gmail.com" style="color:#00796b;text-decoration:underline;">varmabalaram81@gmail.com</a></div>
+                <div><b>LinkedIn:</b><a href="https://www.linkedin.com/in/balaram-varma-458918290/" target="_blank" style="color:#00796b;text-decoration:underline;">balaram-varma-458918290</a></div>
+            </div><a href="mailto:varmabalaram81@gmail.com" class="contact-btn">Email Me</a></section>
+    </main>
+    <script>
+        const roles = ["AI Student",
+            "Frontend Developer",
+            "ML Enthusiast",
+            "Event Host"
+        ];
+        let roleIndex = 0;
+        let charIndex = 0;
+        let typingElement = document.getElementById("typing");
+        let isDeleting = false;
+        let typingSpeed = 80;
+        let pauseAfter = 1200;
+
+        function typeRole() {
+            const currentRole = roles[roleIndex];
+            if (!isDeleting) {
+                typingElement.textContent = currentRole.substring(0, charIndex + 1);
+                charIndex++;
+                if (charIndex === currentRole.length) {
+                    setTimeout(() => {
+                        isDeleting = true;
+                        typeRole();
+                    }, pauseAfter);
+                    return;
+                }
+            } else {
+                typingElement.textContent = currentRole.substring(0, charIndex - 1);
+                charIndex--;
+                if (charIndex === 0) {
+                    isDeleting = false;
+                    roleIndex = (roleIndex + 1) % roles.length;
+                }
+            }
+            setTimeout(typeRole, isDeleting ? 40 : typingSpeed);
+        }
+
+        typeRole();
+    </script>
+</body>
+
+</html>
