@@ -2,10 +2,13 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Balaram Varma | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             box-sizing: border-box;
@@ -14,443 +17,376 @@
         }
         
         body {
-            font-family: 'Montserrat', 'Segoe UI', sans-serif;
-            background: linear-gradient(120deg, #e0f7fa 0%, #f8fafc 100%);
-            color: #222;
-            min-height: 100vh;
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: #2c2c2c;
+            background: #f8f8f8;
         }
         
-        header {
-            background: linear-gradient(135deg, #2c3e50 60%, #00e6e6 100%);
-            color: white;
-            padding: 3rem 1rem 2rem 1rem;
-            text-align: center;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
-            position: relative;
-            border-bottom-left-radius: 40px;
-            border-bottom-right-radius: 40px;
-        }
-        
-        .profile-pic {
-            width: 120px;
-            height: 120px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid #fff;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-            margin-bottom: 1rem;
-            background: #fff;
-        }
-        
-        header h1 {
-            font-size: 2.8rem;
-            margin-bottom: 0.5rem;
-            letter-spacing: 2px;
-        }
-        
-        .typing {
-            font-size: 1.2rem;
-            color: #00e6e6;
-            font-weight: bold;
-            white-space: nowrap;
-            overflow: hidden;
-            border-right: 3px solid white;
-            min-height: 1.5em;
-            margin: 0 auto 1rem auto;
-            max-width: 100%;
-            width: fit-content;
-            animation: blink 0.75s step-end infinite;
-        }
-        
-        @keyframes blink {
-            50% {
-                border-color: transparent
-            }
-        }
-        
-        nav {
-            margin-top: 1.5rem;
-        }
-        
-        nav a {
-            color: #fff;
+        a {
             text-decoration: none;
-            margin: 0 1.2rem;
-            font-weight: 500;
-            font-size: 1.1rem;
-            transition: color 0.2s;
-            position: relative;
+            color: inherit;
         }
+        /* Highlight */
         
-        nav a:after {
-            content: '';
-            display: block;
-            width: 0;
-            height: 2px;
-            background: #00e6e6;
-            transition: width .3s;
-            position: absolute;
-            left: 0;
-            bottom: -4px;
+        .highlight {
+            color: #e100ff;
+            font-weight: 700;
         }
+        /* NAVBAR */
         
-        nav a:hover {
-            color: #00e6e6;
-        }
-        
-        nav a:hover:after {
-            width: 100%;
-        }
-        
-        main {
-            max-width: 900px;
-            margin: 2.5rem auto;
-            padding: 0 1rem;
-        }
-        
-        section {
-            background: white;
-            margin-bottom: 2rem;
-            padding: 2rem;
-            border-radius: 18px;
-            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
-            opacity: 0;
-            transform: translateY(40px);
-            animation: fadeInUp 1s ease-out forwards;
-        }
-        
-        section:nth-of-type(1) {
-            animation-delay: 0.4s;
-        }
-        
-        section:nth-of-type(2) {
-            animation-delay: 0.8s;
-        }
-        
-        section:nth-of-type(3) {
-            animation-delay: 1.2s;
-        }
-        
-        section:nth-of-type(4) {
-            animation-delay: 1.6s;
-        }
-        
-        section:nth-of-type(5) {
-            animation-delay: 2s;
-        }
-        
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        section h2 {
-            color: #00bcd4;
-            margin-bottom: 1rem;
-            font-size: 1.7rem;
-            border-left: 4px solid #00e6e6;
-            padding-left: 0.7rem;
-            letter-spacing: 1px;
-        }
-        
-        .about-flex {
+        .navbar {
             display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
+            justify-content: space-between;
             align-items: center;
-            margin-top: 1.5rem;
-        }
-        
-        .about-flex .about-text {
-            flex: 2;
-            min-width: 220px;
-        }
-        
-        .about-flex .about-imgs {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            align-items: center;
-            min-width: 120px;
-        }
-        
-        .about-imgs img {
-            width: 90px;
-            height: 90px;
-            object-fit: contain;
-            border-radius: 16px;
-            background: #f0f0f0;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
-            border: 2px solid #e0f7fa;
-        }
-        
-        .ai-photo {
-            width: 180px;
-            border-radius: 16px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            margin: 1rem auto;
-            display: block;
-        }
-        
-        ul {
-            list-style-type: square;
-            padding-left: 1.5rem;
-            margin-top: 0.7rem;
-        }
-        
-        section p,
-        li {
-            font-size: 1.13rem;
-            color: #444;
-        }
-        
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.2rem;
-            margin-top: 1.2rem;
-        }
-        
-        .skill-badge {
-            background: linear-gradient(90deg, #e0f7fa 60%, #fff 100%);
-            color: #00796b;
-            padding: 0.6rem 1.2rem;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 1.05rem;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .skill-badge img {
-            width: 22px;
-            height: 22px;
-            vertical-align: middle;
-        }
-        
-        .gallery {
-            display: flex;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 1.5rem;
-        }
-        
-        .gallery img {
-            width: 160px;
-            height: 110px;
-            object-fit: cover;
-            border-radius: 12px;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.09);
-            border: 2px solid #e0f7fa;
+            padding: 1rem 2rem;
             background: #fff;
-            transition: transform 0.2s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
         
-        .gallery img:hover {
-            transform: scale(1.06) rotate(-2deg);
-            border-color: #00e6e6;
+        .logo {
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: #333;
+        }
+        
+        .nav-links a {
+            margin-left: 1.5rem;
+            font-weight: 500;
+            color: #555;
+            transition: 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #7f00ff;
         }
         
         .contact-btn {
-            display: inline-block;
-            margin-top: 1.2rem;
-            padding: 0.7rem 2rem;
-            background: linear-gradient(90deg, #00e6e6 60%, #00bcd4 100%);
+            padding: 0.5rem 1rem;
+            background: #7f00ff;
             color: #fff;
-            border: none;
-            border-radius: 24px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            transition: background 0.2s, transform 0.2s;
-            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: 0.3s;
         }
         
         .contact-btn:hover {
-            background: linear-gradient(90deg, #00bcd4 60%, #00e6e6 100%);
-            transform: scale(1.04);
+            background: #e100ff;
         }
-        /* Highlighted and Enlarged Contact Section */
+        /* HERO SECTION */
         
-        #contact {
-            box-shadow: 0 0 24px 4px #00e6e6, 0 0 0 4px #e0f7fa inset;
-            border: 2px solid #00e6e6;
-            background: #f0fcfc;
-            margin-top: 3rem;
-            margin-bottom: 3rem;
-            padding: 3rem 2rem;
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4rem 2rem;
+            background: #fff;
+            border-radius: 12px;
+            max-width: 900px;
+            margin: 3rem auto;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
         }
         
-        #contact h2 {
-            color: #0097a7;
-            font-size: 2.2rem;
+        .hero-text {
+            flex: 1;
+        }
+        
+        .hero-text h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #7f00ff;
+            animation: fadeIn 1s ease;
+        }
+        
+        .hero-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            animation: fadeIn 1.5s ease;
+        }
+        
+        .say-hello {
+            margin-top: 2rem;
+            display: inline-block;
+            padding: 0.8rem 1.6rem;
+            background: linear-gradient(135deg, #7f00ff, #e100ff);
+            color: #fff;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        
+        .say-hello:hover {
+            background: linear-gradient(135deg, #e100ff, #7f00ff);
+        }
+        
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .hero-image img {
+            max-width: 300px;
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+        /* SECTIONS */
+        
+        section {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        section h2 {
+            font-size: 2rem;
+            color: #7f00ff;
             margin-bottom: 1.5rem;
+            text-align: center;
         }
         
-        #contact p {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-        }
-        
-        .contact-info {
-            background: #e0f7fa;
-            border: 2px solid #00e6e6;
-            color: #00796b;
-            font-weight: bold;
-            font-size: 1.2rem;
-            padding: 1.5rem 2rem;
-            border-radius: 18px;
-            margin-bottom: 2rem;
-        }
-        
-        .contact-info div {
+        section p {
+            color: #555;
+            text-align: center;
             margin-bottom: 1rem;
         }
         
-        .contact-info div:last-child {
-            margin-bottom: 0;
+        section ul {
+            list-style: none;
+            padding-left: 0;
         }
         
-        .contact-btn {
-            font-size: 1.3rem;
-            padding: 1rem 2.5rem;
-            margin-top: 1.5rem;
+        section ul li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        /* CONTACT SECTION */
+        
+        .contact-cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 2rem;
         }
         
-        @media (max-width: 700px) {
-            header h1 {
+        .contact-card {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            width: 160px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: 0.3s;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-card i {
+            font-size: 2rem;
+            color: #7f00ff;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-card span {
+            display: block;
+            font-weight: 600;
+            margin-top: 0.3rem;
+            color: #333;
+        }
+        /* ACHIEVEMENTS PHOTOS PLACEHOLDER */
+        
+        .achievement-photos {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .achievement-photos div {
+            width: 100px;
+            height: 100px;
+            background: #eee;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: #aaa;
+        }
+        
+        @media(max-width:768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-text,
+            .hero-image {
+                width: 100%;
+            }
+            .hero-text h1 {
                 font-size: 2rem;
             }
-            .typing {
-                font-size: 1rem;
+            .hero-image img {
+                max-width: 250px;
             }
-            main {
-                padding: 0;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
             }
-            section {
-                padding: 1.2rem;
-            }
-            .about-flex {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            .gallery img {
-                width: 100px;
-                height: 70px;
-            }
-            .ai-photo {
-                width: 100px;
-            }
-            #contact {
-                padding: 1.5rem 0.5rem;
-            }
-            / .contact-info {
-                padding: 1rem 0.5rem;
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
     </style>
 </head>
 
 <body>
-    <header><img src="c:\Users\USER\Downloads\portfilo image.jpeg" alt="Balaram Varma" class="profile-pic" />
-        <h1>Balaram Varma</h1>
-        <div class="typing" id="typing"></div>
-        <nav><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></nav>
-    </header>
-    <main>
-        <section id="about">
-            <h2>About Me</h2><img src="https://cdn.pixabay.com/photo/2017/01/31/13/14/artificial-intelligence-2025789_1280.png" alt="Artificial Intelligence Illustration" class="ai-photo" />
-            <div class="about-flex">
-                <div class="about-text">
-                    <p>Hi! I'm <b>Balaram Varma</b>, a 2nd-year student at Vignan's Institute of Information Technology, Visakhapatnam. My passion lies in <b>Artificial Intelligence</b>,
-                        <b>Web Development</b>, and <b>Python programming</b>. I love building creative projects, hosting events, and collaborating with like-minded people. </p>
-                    <ul>
-                        <li><b>Interests:</b>AI, Machine Learning, Deep Learning, UI &amp; UX, Data Science, Web Development, Open Source</li>
-                        <li><b>Hobbies:</b>Coding, reading tech blogs, playing chess, and exploring new technologies</li>
-                        <li><b>Achievements:</b>National Finalist (Top 4) in Hackvyha'25 organized by GeeksforGeeks at SRM AP; built several mini-projects using Python and JavaScript, participated in coding competitions, and contributed to college tech events</li>
-                        <li><b>Goals:</b>To become a skilled AI engineer and contribute to impactful projects in technology</li>
-                    </ul>
-                </div>
-                <div class="about-imgs"><img src="https://cdn.pixabay.com/photo/2017/01/31/13/14/artificial-intelligence-2025789_1280.png" alt="AI Illustration" /><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo" /></div>
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="logo">Balaram Varma</div>
+        <div class="nav-links"> <a href="#home">Home</a> <a href="#blog">Blog</a> <a href="#achievements">Achievements</a> <a href="#certifications">Certifications</a> <a href="#experiences">Experiences</a> <a href="#contact" class="contact-btn">Contact</a> </div>
+    </div>
+    <!-- HOME SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h1>Hi! I’m Balaram Varma</h1>
+            <p id="typed-text"></p> <a href="mailto:varmabalarma81@gmail.com" class="say-hello">Say Hello!</a> </div>
+        <div class="hero-image"> <img src="c:/Users/USER/Downloads/portfilo image.jpeg" alt="Balaram Varma"> </div>
+    </section>
+    <!-- BLOG SECTION -->
+    <section id="blog">
+        <h2>Blog</h2>
+        <ul>
+            <li>Exploring AI in Daily Life</li>
+            <li>My Full Stack Project Journey</li>
+            <li>Tips for Hackathon Success</li>
+        </ul>
+    </section>
+    <!-- ACHIEVEMENTS SECTION -->
+    <section id="achievements">
+        <h2>Achievements</h2>
+        <ul>
+            <li>🏆 <strong class="highlight">National Finalist 1</strong> – HackVyuha '25, organized by <span class="highlight">GeeksforGeeks</span> at <span class="highlight">SRM University-AP</span></li>
+            <li>🌟 Ranked among the <strong class="highlight">Top 4 teams across India</strong></li>
+            <li>💡 <strong class="highlight">Team NEXUS</strong> Members:
+                <ul>
+                    <li>🙋 Mukesh Sai (Team Lead)</li>
+                    <li>🙋 Sai Kiran</li>
+                    <li>🙋 Dhanush</li>
+                    <li>🙋 Balaram Varma (me!)</li>
+                    <li>🙋 Manohar</li>
+                </ul>
+            </li>
+            <li>🚀 Highlights of the Hackathon:
+                <ul>
+                    <li>Day 1: Inspiring seminars & brainstorming</li>
+                    <li>Day 2: Hackathon – prototyping & teamwork</li>
+                    <li>Day 3: Grand Finale – Live pitching & awards</li>
+                </ul>
+            </li>
+            <li>💠 Valedictory Ceremony Guests:
+                <ul>
+                    <li>Mr. Devadas Gorrela, Operations Manager, Pillay R Group</li>
+                    <li>Prof. Chakkalakal Tomy, Dean, School of Engineering and Sciences</li>
+                    <li>Dr. Ashok Kumar Pradhan, Associate Professor, CSE & Faculty Advisor, GfG Campus Body</li>
+                </ul>
+            </li>
+            <li>✨ Special Mentions:
+                <ul>
+                    <li>25+ Evaluators & Mentors felicitated</li>
+                    <li>Powered by <span class="highlight">Mahesh Babu Chittem</span> & <span class="highlight">GfG SRMUAP Core Team</span></li>
+                    <li>Guidance from <span class="highlight">Dr. Ashok Kumar Pradhan</span>, support from <span class="highlight">Dr. Murali Krishna Enduri</span> & <span class="highlight">Prof. Chakkalakal Tomy</span></li>
+                    <li>Encouragement from <span class="highlight">Ms. Vishaaly Pillai</span>, Executive Director, Pillay R Group</li>
+                </ul>
+            </li>
+        </ul>
+        <!-- Photos placeholder -->
+        <div class="achievement-photos">
+            <div>Photo 1</div>
+            <div>Photo 2</div>
+            <div>Photo 3</div>
+        </div>
+    </section>
+    <!-- CERTIFICATIONS SECTION -->
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <ul>
+            <li>Full Stack Web Development (React, Node.js, MongoDB)</li>
+            <li>Data Science & Machine Learning</li>
+            <li>Cybersecurity & Ethical Hacking Basics</li>
+        </ul>
+    </section>
+    <!-- EXPERIENCES SECTION -->
+    <section id="experiences">
+        <h2>Experiences</h2>
+        <ul>
+            <li>Internship – Full Stack Developer at VSP Township Portal Project</li>
+            <li>Project – CyberGuard: RL-Powered Personal Cyber Safety Coach</li>
+            <li>Hackathon – AI Sprint, IIT Bombay – Agentic AI Solutions</li>
+        </ul>
+    </section>
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-cards">
+            <div class="contact-card">
+                <a href="tel:9392362082"> <i class="fas fa-phone"></i> <span>+91 9392362082</span> </a>
             </div>
-        </section>
-        <section id="skills">
-            <h2>Skills</h2>
-            <div class="skills-list"><span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />HTML</span><span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />CSS</span>
-                <span
-                    class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />JavaScript</span><span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />Python</span>
-                    <span
-                        class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="pandas" />pandas</span><span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikit-learn/scikit-learn-original.svg" alt="scikit-learn" />scikit-learn</span>
-                        <span
-                            class="skill-badge">Anchoring</span><span class="skill-badge">Event Hosting</span></div>
-        </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li><b>Elvetae 12th</b>: A guidance platform designed to help intermediate (12th) students choose the right path for their future. It provides resources and advice to support students in making informed career and education decisions. </li>
-                <li><b>Offline Attendance Bot</b>: A bot that allows users to check their attendance without needing an internet connection. (Currently under development) </li>
-                <li><b>GPS Number Tracker</b>: A project for tracking phone numbers using GPS technology. (Currently under development) </li>
-            </ul>
-        </section>
-        <section id="gallery">
-            <h2>Gallery</h2>
-            <div class="gallery"><img src="https://cdn.pixabay.com/photo/2017/01/31/13/14/artificial-intelligence-2025789_1280.png" alt="AI Photo" /><img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Python Code" /><img
-                    src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" alt="Web Development" /><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Event Hosting"
-                /></div>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Want to connect or collaborate? Feel free to reach out! </p>
-            <div class="contact-info">
-                <div><b>Phone:</b>9392362082</div>
-                <div><b>Email:</b><a href="mailto:varmabalaram81@gmail.com" style="color:#00796b;text-decoration:underline;">varmabalaram81@gmail.com</a></div>
-                <div><b>LinkedIn:</b><a href="https://www.linkedin.com/in/balaram-varma-458918290/" target="_blank" style="color:#00796b;text-decoration:underline;">balaram-varma-458918290</a></div>
-            </div><a href="mailto:varmabalaram81@gmail.com" class="contact-btn">Email Me</a></section>
-    </main>
+            <div class="contact-card">
+                <a href="https://wa.me/919392362082" target="_blank"> <i class="fab fa-whatsapp"></i> <span>WhatsApp</span> </a>
+            </div>
+            <div class="contact-card">
+                <a href="mailto:varmabalarma81@gmail.com"> <i class="fas fa-envelope"></i> <span>Email</span> </a>
+            </div>
+            <div class="contact-card">
+                <a href="https://www.linkedin.com/in/balaram-varma-458918290/" target="_blank"> <i class="fab fa-linkedin"></i> <span>LinkedIn</span> </a>
+            </div>
+            <div class="contact-card">
+                <a href="https://github.com/balaram33143" target="_blank"> <i class="fab fa-github"></i> <span>GitHub</span> </a>
+            </div>
+        </div>
+    </section>
+    <!-- TYPING ANIMATION SCRIPT -->
     <script>
-        const roles = ["AI Student",
-            "Frontend Developer",
-            "ML Enthusiast",
-            "Event Host"
-        ];
-        let roleIndex = 0;
-        let charIndex = 0;
-        let typingElement = document.getElementById("typing");
-        let isDeleting = false;
-        let typingSpeed = 80;
-        let pauseAfter = 1200;
+        const texts = ["3rd-year AI & DS enthusiast 🎓", "Passionate about Artificial Intelligence 🤖 & Machine Learning 📊", "Love building innovative projects 💡 and interactive front-end designs 🎨", "Back-end development & real-world solutions 🚀", "Hackathon enthusiast ⚡ | Learning, creating, making an impact 🌍"];
+        let count = 0;
+        let index = 0;
+        let currentText = '';
+        let letter = '';
 
-        function typeRole() {
-            const currentRole = roles[roleIndex];
-            if (!isDeleting) {
-                typingElement.textContent = currentRole.substring(0, charIndex + 1);
-                charIndex++;
-                if (charIndex === currentRole.length) {
-                    setTimeout(() => {
-                        isDeleting = true;
-                        typeRole();
-                    }, pauseAfter);
-                    return;
-                }
+        function type() {
+            if (count === texts.length) count = 0;
+            currentText = texts[count];
+            letter = currentText.slice(0, ++index);
+            document.getElementById('typed-text').textContent = letter;
+            if (letter.length === currentText.length) {
+                setTimeout(() => {
+                    index = 0;
+                    count++;
+                    type();
+                }, 2000);
             } else {
-                typingElement.textContent = currentRole.substring(0, charIndex - 1);
-                charIndex--;
-                if (charIndex === 0) {
-                    isDeleting = false;
-                    roleIndex = (roleIndex + 1) % roles.length;
-                }
+                setTimeout(type, 100);
             }
-            setTimeout(typeRole, isDeleting ? 40 : typingSpeed);
         }
-
-        typeRole();
+        type();
     </script>
 </body>
 
