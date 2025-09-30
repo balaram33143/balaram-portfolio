@@ -30,7 +30,7 @@
         /* Highlight */
         
         .highlight {
-            color: #e100ff;
+            color: #007bff;
             font-weight: 700;
         }
         /* NAVBAR */
@@ -60,13 +60,21 @@
             transition: 0.3s;
         }
         
+        .nav-links a[href="#college-life"] {
+            margin-left: 1.5rem;
+        }
+        
+        .nav-links a[href="#project"] {
+            margin-left: 1.5rem;
+        }
+        
         .nav-links a:hover {
-            color: #7f00ff;
+            color: #007bff;
         }
         
         .contact-btn {
             padding: 0.5rem 1rem;
-            background: #7f00ff;
+            background: #007bff;
             color: #fff;
             border-radius: 6px;
             font-weight: 600;
@@ -74,7 +82,7 @@
         }
         
         .contact-btn:hover {
-            background: #e100ff;
+            background: #0056b3;
         }
         /* HERO SECTION */
         
@@ -99,7 +107,7 @@
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 1rem;
-            color: #7f00ff;
+            color: #007bff;
             animation: fadeIn 1s ease;
         }
         
@@ -110,11 +118,19 @@
             animation: fadeIn 1.5s ease;
         }
         
+        .hero-text .description {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #666;
+            margin-top: 1rem;
+            animation: fadeIn 2s ease;
+        }
+        
         .say-hello {
             margin-top: 2rem;
             display: inline-block;
             padding: 0.8rem 1.6rem;
-            background: linear-gradient(135deg, #7f00ff, #e100ff);
+            background: linear-gradient(135deg, #007bff, #0056b3);
             color: #fff;
             border-radius: 8px;
             font-weight: 600;
@@ -122,7 +138,7 @@
         }
         
         .say-hello:hover {
-            background: linear-gradient(135deg, #e100ff, #7f00ff);
+            background: linear-gradient(135deg, #0056b3, #007bff);
         }
         
         .hero-image {
@@ -131,10 +147,13 @@
         }
         
         .hero-image img {
-            max-width: 300px;
-            width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            width: 450px;
+            height: 450px;
+            max-width: 100%;
+            border-radius: 50%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border: 1px solid #ddd;
+            object-fit: cover;
         }
         /* SECTIONS */
         
@@ -149,7 +168,7 @@
         
         section h2 {
             font-size: 2rem;
-            color: #7f00ff;
+            color: #007bff;
             margin-bottom: 1.5rem;
             text-align: center;
         }
@@ -196,7 +215,7 @@
         
         .contact-card i {
             font-size: 2rem;
-            color: #7f00ff;
+            color: #007bff;
             margin-bottom: 0.5rem;
         }
         
@@ -206,28 +225,279 @@
             margin-top: 0.3rem;
             color: #333;
         }
-        /* ACHIEVEMENTS PHOTOS PLACEHOLDER */
+        /* Tabbed Section Styles */
+        
+        .internship-list {
+            margin-top: 2rem;
+        }
+        
+        .internship-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            transition: 0.3s;
+        }
+        
+        .internship-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .internship-logo {
+            width: 60px;
+            height: 60px;
+            background: #007bff;
+            border-radius: 8px;
+            margin-right: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .internship-details h3 {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        
+        .internship-details p {
+            color: #555;
+            margin-bottom: 0.3rem;
+        }
+        
+        .internship-tags {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .tag {
+            background: #f0f0f0;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            color: #666;
+        }
+        /* ACHIEVEMENTS PHOTOS */
         
         .achievement-photos {
             display: flex;
             justify-content: center;
-            gap: 1rem;
-            margin-top: 1rem;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
         }
         
-        .achievement-photos div {
-            width: 100px;
-            height: 100px;
-            background: #eee;
-            border-radius: 8px;
+        .achievement-photos img {
+            width: 200px;
+            height: 200px;
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border: 1px solid #ddd;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        /* Slideshow Navigation Buttons */
+        
+        .modal .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 18px;
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            -webkit-user-select: none;
+            user-select: none;
+            z-index: 1001;
+        }
+        
+        .modal .prev {
+            left: 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .modal .next {
+            right: 0;
+            border-radius: 5px 0 0 5px;
+        }
+        
+        .modal .nav-btn:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        
+        .modal .caption {
+            margin: auto;
+            display: block;
+            width: 90%;
+            max-width: 800px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+        
+        .achievement-photos img:hover {
+            transform: scale(1.1);
+        }
+        /* Modal Styles */
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .modal-content {
+            position: relative;
+            margin: auto;
+            display: block;
+            width: 90%;
+            max-width: 800px;
+            max-height: 90%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .close:hover {
+            color: #007bff;
+        }
+        /* CONTACT FORM STYLES */
+        
+        .contact-container {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .contact-info {
+            flex: 1;
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-info h3 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .contact-info-item {
             display: flex;
             align-items: center;
-            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-info-item i {
+            color: #007bff;
+            font-size: 1.2rem;
+            margin-right: 0.8rem;
+            width: 20px;
+        }
+        
+        .contact-info-item span {
+            color: #555;
+            font-weight: 500;
+        }
+        
+        .profile-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-top: 1rem;
+            display: block;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border: 1px solid #ddd;
+        }
+        
+        .contact-form {
+            flex: 1;
+        }
+        
+        .contact-form h3 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #555;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+        
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        
+        .send-btn {
+            background: #007bff;
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 6px;
             font-weight: 600;
-            color: #aaa;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .send-btn:hover {
+            background: #0056b3;
         }
         
         @media(max-width:768px) {
+            .contact-container {
+                flex-direction: column;
+            }
             .hero {
                 flex-direction: column;
                 text-align: center;
@@ -242,6 +512,57 @@
             .hero-image img {
                 max-width: 250px;
             }
+        }
+        /* COLLEGE LIFE */
+        
+        .college-life ul li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        /* PROJECT */
+        
+        .project-list {
+            margin-top: 2rem;
+        }
+        
+        .project-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            transition: 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-logo {
+            width: 60px;
+            height: 60px;
+            background: #007bff;
+            border-radius: 8px;
+            margin-right: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .project-details h3 {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-details p {
+            color: #555;
+            margin-bottom: 0.3rem;
         }
         
         @keyframes fadeIn {
@@ -261,36 +582,40 @@
     <!-- NAVBAR -->
     <div class="navbar">
         <div class="logo">Balaram Varma</div>
-        <div class="nav-links"> <a href="#home">Home</a> <a href="#blog">Blog</a> <a href="#achievements">Achievements</a> <a href="#certifications">Certifications</a> <a href="#experiences">Experiences</a> <a href="#contact" class="contact-btn">Contact</a> </div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#college-life">College Life</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#internships">Internships</a>
+            <a href="#project">Projects</a>
+            <a href="#contact" class="contact-btn">Contact</a>
+        </div>
     </div>
     <!-- HOME SECTION -->
     <section class="hero" id="home">
         <div class="hero-text">
             <h1>Hi! I’m Balaram Varma</h1>
-            <p id="typed-text"></p> <a href="mailto:varmabalarma81@gmail.com" class="say-hello">Say Hello!</a> </div>
-        <div class="hero-image"> <img src="c:/Users/USER/Downloads/portfilo image.jpeg" alt="Balaram Varma"> </div>
-    </section>
-    <!-- BLOG SECTION -->
-    <section id="blog">
-        <h2>Blog</h2>
-        <ul>
-            <li>Exploring AI in Daily Life</li>
-            <li>My Full Stack Project Journey</li>
-            <li>Tips for Hackathon Success</li>
-        </ul>
+            <p class="description">I’m a 3rd-year B.Tech student in AI & Data Science at Vignans Institute of Information Technology, passionate about Machine Learning and Full Stack Development. I love building intelligent web applications and AI-driven solutions that solve
+                real-world problems and create meaningful impact.</p>
+            <a href="mailto:varmabalarma81@gmail.com" class="say-hello">Say Hello!</a>
+        </div>
+        <div class="hero-image">
+            <img src="profile%20photo/profile%20pic%20.jpg" alt="Balaram Varma">
+        </div>
     </section>
     <!-- ACHIEVEMENTS SECTION -->
     <section id="achievements">
         <h2>Achievements</h2>
         <ul>
-            <li>🏆 <strong class="highlight">National Finalist 1</strong> – HackVyuha '25, organized by <span class="highlight">GeeksforGeeks</span> at <span class="highlight">SRM University-AP</span></li>
+            <li>🏆 <strong class="highlight">National Finalist 1</strong>– HackVyuha '25, organized by <span class="highlight">GeeksforGeeks</span> at <span class="highlight">SRM University-AP</span></li>
             <li>🌟 Ranked among the <strong class="highlight">Top 4 teams across India</strong></li>
-            <li>💡 <strong class="highlight">Team NEXUS</strong> Members:
+            <li>💡 <strong class="highlight">Team NEXUS</strong>Members:
                 <ul>
                     <li>🙋 Mukesh Sai (Team Lead)</li>
+                    <li>🙋 Balaram Varma (me!)</li>
                     <li>🙋 Sai Kiran</li>
                     <li>🙋 Dhanush</li>
-                    <li>🙋 Balaram Varma (me!)</li>
                     <li>🙋 Manohar</li>
                 </ul>
             </li>
@@ -301,92 +626,195 @@
                     <li>Day 3: Grand Finale – Live pitching & awards</li>
                 </ul>
             </li>
-            <li>💠 Valedictory Ceremony Guests:
-                <ul>
-                    <li>Mr. Devadas Gorrela, Operations Manager, Pillay R Group</li>
-                    <li>Prof. Chakkalakal Tomy, Dean, School of Engineering and Sciences</li>
-                    <li>Dr. Ashok Kumar Pradhan, Associate Professor, CSE & Faculty Advisor, GfG Campus Body</li>
-                </ul>
+        </ul>
+        <!-- Achievement Photos -->
+        <div class="achievement-photos"> <img src="achivement%20photo/hackvuyha1.jpg" alt="HackVyuha Achievement 1" onclick="openModal(event, this)"> <img src="achivement%20photo/hackvuyha2.jpg" alt="HackVyuha Achievement 2" onclick="openModal(event, this)">
+            <img src="achivement%20photo/hackvyha3.jpg" alt="HackVyuha Achievement 3" onclick="openModal(event, this)">
+            <img src="achivement%20photo/hackvuyha4.jpg" alt="HackVyuha Achievement 4" onclick="openModal(event, this)">
+            <img src="achivement%20photo/hackvyha5.jpg" alt="HackVyuha Achievement 5" onclick="openModal(event, this)"> </div>
+    </section>
+    <!-- COLLEGE LIFE SECTION -->
+    <section id="college-life">
+        <h2>College Life</h2>
+        <p>Pursuing B.Tech in Computer Science and Engineering (AI & Data Analytics) at Vignan's Institute of Information Technology, Duvvada, Visakhapatnam.</p>
+        <ul>
+            <li><strong>1st Year:</strong> Focused on foundational courses including programming fundamentals (C, Python), mathematics (calculus, linear algebra), and basic computer science concepts. Built strong problem-solving skills through introductory
+                projects.
             </li>
-            <li>✨ Special Mentions:
-                <ul>
-                    <li>25+ Evaluators & Mentors felicitated</li>
-                    <li>Powered by <span class="highlight">Mahesh Babu Chittem</span> & <span class="highlight">GfG SRMUAP Core Team</span></li>
-                    <li>Guidance from <span class="highlight">Dr. Ashok Kumar Pradhan</span>, support from <span class="highlight">Dr. Murali Krishna Enduri</span> & <span class="highlight">Prof. Chakkalakal Tomy</span></li>
-                    <li>Encouragement from <span class="highlight">Ms. Vishaaly Pillai</span>, Executive Director, Pillay R Group</li>
-                </ul>
+            <li><strong>2nd Year:</strong> Delved into core subjects like data structures, algorithms, database management, and introduction to artificial intelligence. Participated in coding competitions to enhance logical thinking.</li>
+            <li><strong>3rd Year:</strong> Currently exploring advanced topics in machine learning, data science, neural networks, and AI applications. Actively involved in hackathons, group projects, and real-world implementations like the VSP Township Portal
+                internship.
             </li>
         </ul>
-        <!-- Photos placeholder -->
+        <!-- College Life Photos -->
         <div class="achievement-photos">
-            <div>Photo 1</div>
-            <div>Photo 2</div>
-            <div>Photo 3</div>
+            <img src="college%20life/event%201.jpg" alt="College Life Photo 1" onclick="openModal(event, this)">
+            <img src="college%20life/event%202.jpg" alt="College Life Photo 2" onclick="openModal(event, this)">
+            <img src="college%20life/event%2021.jpg" alt="College Life Photo 3" onclick="openModal(event, this)">
         </div>
     </section>
     <!-- CERTIFICATIONS SECTION -->
     <section id="certifications">
         <h2>Certifications</h2>
         <ul>
-            <li>Full Stack Web Development (React, Node.js, MongoDB)</li>
-            <li>Data Science & Machine Learning</li>
-            <li>Cybersecurity & Ethical Hacking Basics</li>
+            <li>AWS Certified Data Engineering - Organized by EduSkills</li>
+            <li>Google Android Developer - Organized by EduSkills</li>
         </ul>
+        <!-- Certificate Photos -->
+        <div class="achievement-photos">
+            <img src="certificate%20photo/aws%20data.jpg" alt="AWS Certified Data Engineering Certificate" onclick="openModal(event, this)">
+            <img src="certificate%20photo/goggle%20andriod%20.jpg" alt="Google Android Developer Certificate" onclick="openModal(event, this)">
+        </div>
     </section>
-    <!-- EXPERIENCES SECTION -->
-    <section id="experiences">
-        <h2>Experiences</h2>
-        <ul>
-            <li>Internship – Full Stack Developer at VSP Township Portal Project</li>
-            <li>Project – CyberGuard: RL-Powered Personal Cyber Safety Coach</li>
-            <li>Hackathon – AI Sprint, IIT Bombay – Agentic AI Solutions</li>
-        </ul>
-    </section>
-    <!-- CONTACT SECTION -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <div class="contact-cards">
-            <div class="contact-card">
-                <a href="tel:9392362082"> <i class="fas fa-phone"></i> <span>+91 9392362082</span> </a>
-            </div>
-            <div class="contact-card">
-                <a href="https://wa.me/919392362082" target="_blank"> <i class="fab fa-whatsapp"></i> <span>WhatsApp</span> </a>
-            </div>
-            <div class="contact-card">
-                <a href="mailto:varmabalarma81@gmail.com"> <i class="fas fa-envelope"></i> <span>Email</span> </a>
-            </div>
-            <div class="contact-card">
-                <a href="https://www.linkedin.com/in/balaram-varma-458918290/" target="_blank"> <i class="fab fa-linkedin"></i> <span>LinkedIn</span> </a>
-            </div>
-            <div class="contact-card">
-                <a href="https://github.com/balaram33143" target="_blank"> <i class="fab fa-github"></i> <span>GitHub</span> </a>
+    <!-- INTERNSHIPS SECTION -->
+    <section id="internships">
+        <h2>Internships</h2>
+        <div class="internship-list">
+            <div class="internship-card">
+                <div class="internship-logo">RINL</div>
+                <div class="internship-details">
+                    <h3>Rashtriya Ispat Nigam Limited (RINL), Visakhapatnam Steel Plant</h3>
+                    <p>Full Stack Development Intern – IT & ERP Department</p>
+                    <p>09-06-2025 to 05-07-2025 (4 weeks)</p>
+                    <p><strong>Project:</strong> VSP Township Portal – A full-stack portal for the VSP Township community with features including:</p>
+                    <ul style="margin-left: 1rem; color: #555; font-size: 0.9rem;">
+                        <li>Lost & Found System – Report and search for lost children, pets, phones, bags, etc.</li>
+                        <li>Places to Visit – Tourist spots, parks, hospitals, schools with map view</li>
+                        <li>Live Weather Report – Real-time temperature and weather using OpenWeatherMap API</li>
+                    </ul>
+                    <p><strong>Tech Stack:</strong> React.js, Tailwind CSS, Node.js, Express.js, MongoDB | APIs: OpenWeatherMap, Google Maps</p>
+                    <p><strong>Course:</strong> B.Tech in CSE (AI & Data Analytics) | <strong>Institute:</strong> Vignan's Institute of Information Technology, Duvvada</p>
+                    <div class="internship-tags">
+                        <span class="tag">Full Stack</span>
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">MongoDB</span>
+                        <span class="tag">APIs</span>
+                    </div>
+                    <!-- Internship Photos -->
+                    <div class="achievement-photos">
+                        <img src="steel%20%20plant%20project/plant%201.jpg" alt="Steel Plant Internship Photo 1" onclick="openModal(event, this)">
+                        <img src="steel%20%20plant%20project/plant%202.jpg" alt="Steel Plant Internship Photo 2" onclick="openModal(event, this)">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    <!-- TYPING ANIMATION SCRIPT -->
-    <script>
-        const texts = ["3rd-year AI & DS enthusiast 🎓", "Passionate about Artificial Intelligence 🤖 & Machine Learning 📊", "Love building innovative projects 💡 and interactive front-end designs 🎨", "Back-end development & real-world solutions 🚀", "Hackathon enthusiast ⚡ | Learning, creating, making an impact 🌍"];
-        let count = 0;
-        let index = 0;
-        let currentText = '';
-        let letter = '';
 
-        function type() {
-            if (count === texts.length) count = 0;
-            currentText = texts[count];
-            letter = currentText.slice(0, ++index);
-            document.getElementById('typed-text').textContent = letter;
-            if (letter.length === currentText.length) {
-                setTimeout(() => {
-                    index = 0;
-                    count++;
-                    type();
-                }, 2000);
+    <!-- PROJECT SECTION -->
+    <section id="project">
+        <h2>Projects</h2>
+        <div class="project-list">
+            <div class="project-card">
+                <div class="project-logo">Medi</div>
+                <div class="project-details">
+                    <h3>NextGen Medi - Multimodal Disease Prediction System</h3>
+                    <p>The Multimodal Disease Prediction System is an AI-driven healthcare solution designed to assist in early and accurate disease detection by analyzing multiple types of patient data simultaneously. This system takes health reports, medical
+                        images (X-rays), and textual symptom descriptions as inputs and predicts potential diseases, enabling faster diagnosis and informed medical decision-making.</p>
+                    <p>The core idea of the project is to leverage machine learning and deep learning techniques to process heterogeneous medical data: Health Reports using tabular data models, X-ray Images using CNNs, and Symptoms Text using NLP models
+                        like BERT.</p>
+                    <p><strong>Tech Stack:</strong> Python, TensorFlow/Keras, scikit-learn, BERT/ClinicalBERT, CNNs, NLP</p>
+                    <div class="internship-tags">
+                        <span class="tag">AI</span>
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Deep Learning</span>
+                        <span class="tag">NLP</span>
+                        <span class="tag">Healthcare</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Let's talk about your project</h3>
+                <div class="contact-info-item"><i class="fas fa-phone"></i><span>+91 9392362082</span></div>
+                <div class="contact-info-item"><i class="fas fa-envelope"></i><span>varmabalarma81@gmail.com</span></div>
+                <div class="contact-info-item"><i class="fas fa-map-marker-alt"></i><span>Visakhapatnam, Andhra Pradesh</span></div>
+                <div class="contact-info-item"><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/balaram-varma-458918290" target="_blank" rel="noopener" style="color: #007bff; text-decoration: none;">LinkedIn</a></div>
+                <div class="contact-info-item"><i class="fab fa-github"></i><a href="https://github.com/balaram33143" target="_blank" rel="noopener" style="color: #007bff; text-decoration: none;">GitHub</a></div>
+                <img src="profile%20photo/profile%20pic%20.jpg" alt="Balaram Varma" class="profile-photo">
+                <div style="margin-top: 1rem; text-align: center;">
+                    <h4>Balaram Varma</h4>
+                    <p>Web Developer</p>
+                </div>
+            </div>
+            <form class="contact-form" action="mailto:varmabalarma81@gmail.com" method="post" enctype="text/plain">
+                <h3>Send me a message</h3>
+                <div class="form-group"><label for="name">Name</label><input type="text" id="name" name="name" required></div>
+                <div class="form-group"><label for="email">Your Email</label><input type="email" id="email" name="email" required></div>
+                <div class="form-group"><label for="subject">Subject</label><input type="text" id="subject" name="subject" required></div>
+                <div class="form-group"><label for="message">Your Message</label><textarea id="message" name="message" required></textarea></div><button type="submit" class="send-btn">Send Message</button></form>
+        </div>
+    </section>
+
+    <!-- Global Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <button class="nav-btn prev" onclick="changeImage(-1)">&#10094;</button>
+        <img class="modal-content" id="modalImage">
+        <button class="nav-btn next" onclick="changeImage(1)">&#10095;</button>
+        <div id="caption" class="caption"></div>
+    </div>
+
+    <!-- MODAL SCRIPT -->
+    <script>
+        let currentGallery = [];
+        let currentIndex = 0;
+
+        // Modal functions
+        function openModal(event, imgElement) {
+            event.preventDefault();
+            event.stopPropagation();
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const captionText = document.getElementById('caption');
+            const container = imgElement.closest('.achievement-photos');
+            if (container) {
+                currentGallery = Array.from(container.querySelectorAll('img'));
+                currentIndex = currentGallery.indexOf(imgElement);
             } else {
-                setTimeout(type, 100);
+                currentGallery = [imgElement];
+                currentIndex = 0;
+            }
+            showImage(currentIndex);
+            modal.style.display = 'block';
+        }
+
+        function showImage(index) {
+            const modalImg = document.getElementById('modalImage');
+            const captionText = document.getElementById('caption');
+            if (currentGallery[index]) {
+                modalImg.src = currentGallery[index].src;
+                captionText.innerHTML = currentGallery[index].alt;
             }
         }
-        type();
+
+        function changeImage(direction) {
+            currentIndex += direction;
+            if (currentIndex >= currentGallery.length) {
+                currentIndex = 0;
+            } else if (currentIndex < 0) {
+                currentIndex = currentGallery.length - 1;
+            }
+            showImage(currentIndex);
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside image
+        window.onclick = function(event) {
+            const modal = document.getElementById('imageModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
     </script>
 </body>
 

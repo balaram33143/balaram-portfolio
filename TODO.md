@@ -1,0 +1,3 @@
+- [x] Replace placeholder divs in achievements section with img tags for the three photos
+- [x] Update CSS for .achievement-photos to style the img elements properly
+- [ ] Test the page to ensure images load
